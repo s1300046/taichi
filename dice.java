@@ -1,9 +1,16 @@
-import java.util.Random;
+import java.util.*;
 
 public class dice{
     public static void main(String[] args){
 	int[] size = new int[2];
 	Random num = new Random();
+
+	Scanner sc = new Scanner(System.in);
+
+	System.out.println("What is your name? ");
+	System.out.print(">");
+	String name = sc.nextLine();
+	System.out.println("Hello, " + name  +"!");
 
 	for(int i = 0; i < 2; i++){
 	    size[i] = num.nextInt(6) + 1;
@@ -17,10 +24,10 @@ public class dice{
 	System.out.println("Total value: " + sum);
 
 	if(sum > 7){
-	    System.out.println("You won!");
+	    System.out.println(name + "won!");
 	}
 	else{
-	    System.out.println("You lost!");
+	    System.out.println(name + " lost!");
 	}
     }
 }
